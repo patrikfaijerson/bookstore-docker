@@ -1,0 +1,17 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:
+      - echo Entered prebuild phase
+  build:
+    commands:
+      - echo Build started on 
+      - mvn clean package  
+  post_build:
+    commands:
+      - echo Build completed
+artifacts:
+  files:
+    - target/bookstore-0.0.1-SNAPSHOT.jar
+  discard-paths: yes
