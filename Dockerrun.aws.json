@@ -1,0 +1,26 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+      {
+        "name": "app",
+        "image": "057731636091.dkr.ecr.us-east-1.amazonaws.com/bookstore-docker-app",
+        "hostname": "app",
+        "essential": false,
+        "memory": 128
+      },
+      {
+        "name": "nginx",
+        "image": "057731636091.dkr.ecr.us-east-1.amazonaws.com/bookstore-docker-nginx",
+        "hostname": "nginx",
+        "essential": true,
+        "portMappings": [
+          {
+            "hostPort": 80,
+            "containerPort": 80
+          }
+        ],
+        "links": ["app"],
+        "memory": 64
+      }
+    ]
+  }

@@ -1,0 +1,10 @@
+[
+    {
+      "name": "nginx",
+      "imageUri": "057731636091.dkr.ecr.us-east-1.amazonaws.com/bookstore-docker-nginx"
+    },
+    {
+      "name": "app",
+      "imageUri": "057731636091.dkr.ecr.us-east-1.amazonaws.com/bookstore-docker-app"
+    }
+  ]
